@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Valyay/use-react-amplitude/issues"
   },
-  "homepage": "https://github.com/Valyay/use-react-amplitude#readme"
+  "homepage": "https://github.com/Valyay/use-react-amplitude#readme",
+  "publishConfig": {
+    "@valyay:registry": "https://npm.pkg.github.com"
+  }
 }
