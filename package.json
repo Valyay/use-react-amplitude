@@ -1,0 +1,23 @@
+{
+  "name": "@valyay/use-react-amplitude",
+  "version": "0.0.1",
+  "description": "Useful hooks for working with amplitude",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Valyay/use-react-amplitude.git"
+  },
+  "keywords": [
+    "react",
+    "amplitude"
+  ],
+  "author": "Evgeniy Valyaev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Valyay/use-react-amplitude/issues"
+  },
+  "homepage": "https://github.com/Valyay/use-react-amplitude#readme"
+}
