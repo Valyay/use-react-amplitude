@@ -22,5 +22,11 @@
   "homepage": "https://github.com/Valyay/use-react-amplitude#readme",
   "publishConfig": {
     "@valyay:registry": "https://npm.pkg.github.com"
+  },
+  "devDependencies": {
+    "@amplitude/analytics-browser": "1.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "typescript": "4.0"
   }
 }
