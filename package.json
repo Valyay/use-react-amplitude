@@ -1,6 +1,6 @@
 {
   "name": "@valyay/use-react-amplitude",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Useful hooks for working with amplitude",
   "main": "index.js",
   "scripts": {
