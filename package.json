@@ -23,8 +23,12 @@
   "publishConfig": {
     "@valyay:registry": "https://npm.pkg.github.com"
   },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "@amplitude/analytics-browser": "^1.0"
+  },
   "devDependencies": {
-    "@amplitude/analytics-browser": "1.0",
+    "@amplitude/analytics-browser": "^1.0",
     "@types/react": "^16.8.19",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
