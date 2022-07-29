@@ -1,1 +1,5 @@
+.vscode
 .npmrc
+node_modules
+npm-debug.js
+.DS_store
