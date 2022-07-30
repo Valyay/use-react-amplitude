@@ -2,9 +2,17 @@
   "name": "@valyay/use-react-amplitude",
   "version": "0.0.2",
   "description": "Useful hooks for working with amplitude",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "build": "tsc",
+    "publish-lib": "npm run build && npm publish",
+    "publish-beta": "npm run build && npm publish --tag beta",
+    "publish-dryrun": "npm run build && npm publish --dry-run"
   },
   "repository": {
     "type": "git",
@@ -24,11 +32,12 @@
     "@valyay:registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "@amplitude/analytics-browser": "^1.0"
+    "@amplitude/analytics-browser": "^1.0",
+    "react": "^16.8.0"
   },
   "devDependencies": {
     "@amplitude/analytics-browser": "^1.0",
+    "@types/node": "^18.6.2",
     "@types/react": "^16.8.19",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",

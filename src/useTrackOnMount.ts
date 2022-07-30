@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { track } from "@amplitude/analytics-browser";
 
-interface UseTrackOnMountProps {
+export interface UseTrackOnMountProps {
   name: string;
 }
 
