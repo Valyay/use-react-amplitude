@@ -2,14 +2,12 @@
   "compilerOptions": {
     "strict": true,
     "baseUrl": "./src",
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "lib": ["es5", "es2015", "dom"],
+    "target": "es6",
+    "module": "commonjs",
     "jsx": "react",
     "declaration": true,
     "outDir": "./dist"
   },
-  "include": ["src/**/*"],
+  "include": ["src"],
   "exclude": ["node_modules"]
 }
