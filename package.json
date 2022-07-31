@@ -2,6 +2,7 @@
   "name": "@valyay/use-react-amplitude",
   "version": "0.0.3",
   "description": "Useful hooks for working with amplitude",
+  "source": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
