@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/Valyay/use-react-amplitude#readme",
   "publishConfig": {
-    "@valyay:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "peerDependencies": {
     "@amplitude/analytics-browser": "^1.0",
