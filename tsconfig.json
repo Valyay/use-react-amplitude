@@ -2,8 +2,9 @@
   "compilerOptions": {
     "strict": true,
     "baseUrl": "./src",
-    "target": "es6",
-    "module": "commonjs",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
     "jsx": "react",
     "declaration": true,
     "outDir": "./dist"
