@@ -29,9 +29,6 @@
     "url": "https://github.com/Valyay/use-react-amplitude/issues"
   },
   "homepage": "https://github.com/Valyay/use-react-amplitude#readme",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "peerDependencies": {
     "@amplitude/analytics-browser": "^1.0",
     "react": "^16.8.0"
