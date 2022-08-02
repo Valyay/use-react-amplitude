@@ -1,47 +1,54 @@
 {
-  "name": "@valyay/use-react-amplitude",
-  "version": "0.0.8",
-  "description": "Useful hooks for working with amplitude",
-  "source": "src/index.ts",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist/**/*"
-  ],
-  "scripts": {
-    "test": "exit 0",
-    "build": "tsc",
-    "publish-lib": "npm run build && npm publish",
-    "publish-beta": "npm run build && npm publish --tag beta",
-    "publish-dryrun": "npm run build && npm publish --dry-run"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Valyay/use-react-amplitude.git"
-  },
-  "keywords": [
-    "react",
-    "amplitude"
-  ],
-  "author": "Evgeniy Valyaev",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Valyay/use-react-amplitude/issues"
-  },
-  "publishConfig": {
-    "@valyay:registry": "https://npm.pkg.github.com"
-  },
-  "homepage": "https://github.com/Valyay/use-react-amplitude#readme",
-  "peerDependencies": {
-    "@amplitude/analytics-browser": "^1.0",
-    "react": "^16.8.0"
-  },
-  "devDependencies": {
-    "@amplitude/analytics-browser": "^1.0",
-    "@types/node": "^18.6.2",
-    "@types/react": "^16.8.19",
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0",
-    "typescript": "4.0"
-  }
+	"name": "@valyay/use-react-amplitude",
+	"version": "0.0.8",
+	"description": "Useful hooks for working with amplitude",
+	"source": "src/index.ts",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist/**/*"
+	],
+	"scripts": {
+		"test": "exit 0",
+		"build": "tsc",
+		"publish-lib": "npm run build && npm publish",
+		"publish-beta": "npm run build && npm publish --tag beta",
+		"publish-dryrun": "npm run build && npm publish --dry-run"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Valyay/use-react-amplitude.git"
+	},
+	"keywords": [
+		"react",
+		"amplitude"
+	],
+	"author": "Evgeniy Valyaev",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Valyay/use-react-amplitude/issues"
+	},
+	"publishConfig": {
+		"@valyay:registry": "https://npm.pkg.github.com"
+	},
+	"homepage": "https://github.com/Valyay/use-react-amplitude#readme",
+	"peerDependencies": {
+		"@amplitude/analytics-browser": "^1.0",
+		"react": ">=16.9.0"
+	},
+	"devDependencies": {
+		"@amplitude/analytics-browser": "^1.0",
+		"@testing-library/react": "^12.1.4",
+		"@testing-library/react-hooks": "^8.0.1",
+		"@types/jest": "^27.5.2",
+		"@types/node": "^18.6.2",
+		"@types/react": "^16.8.19",
+		"jest": "^27.0.0",
+		"prettier": "^2.7.1",
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
+		"react-test-renderer": "^16.9.0",
+		"ts-jest": "27.0",
+		"typescript": "^4.0"
+	}
 }
