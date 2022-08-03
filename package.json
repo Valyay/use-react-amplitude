@@ -9,7 +9,9 @@
 		"dist/**/*"
 	],
 	"scripts": {
-		"test": "exit 0",
+		"test": "jest",
+		"test:dev": "jest --watchAll",
+		"test:coverage": "jest --coverage",
 		"build": "tsc",
 		"publish-lib": "npm run build && npm publish",
 		"publish-beta": "npm run build && npm publish --tag beta",

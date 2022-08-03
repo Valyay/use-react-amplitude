@@ -5,3 +5,4 @@ npm-debug.js
 .DS_store
 /dist
 .prettierrc
+/coverage

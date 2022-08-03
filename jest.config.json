@@ -2,6 +2,7 @@
 	"transform": {
 		"^.+\\.(t|j)sx?$": "ts-jest"
 	},
+	"testEnvironment": "jest-environment-jsdom",
 	"testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
 	"transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
 	"moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
