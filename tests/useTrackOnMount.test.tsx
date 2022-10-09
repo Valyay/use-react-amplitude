@@ -1,10 +1,19 @@
 import * as React from 'react';
 import { useTrackOnMount } from '../src/useTrackOnMount';
-import { render } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import { track } from '@amplitude/analytics-browser';
+import { Result } from '@amplitude/analytics-types';
 
 jest.mock('@amplitude/analytics-browser', () => ({
-	track: jest.fn(),
+	track: jest.fn().mockReturnValue({
+		promise: Promise.resolve({
+			code: 200,
+			message: '',
+			event: {
+				event_type: 'event_type',
+			},
+		}),
+	}),
 }));
 
 beforeEach(() => jest.clearAllMocks());
@@ -41,5 +50,24 @@ describe('useTrackOnMount', () => {
 
 		expect(track).toBeCalledTimes(1);
 		expect(track).toBeCalledWith('test', { test_prop: 'test_event_property' }, { android_id: 'test_android_id' });
+	});
+
+	it('track should return result', async () => {
+		let result: Partial<Result>;
+		function Component() {
+			result = useTrackOnMount('test', { test_prop: 'test_event_property' }, { android_id: 'test_android_id' });
+			return <div></div>;
+		}
+		render(<Component />);
+
+		await waitFor(() => {
+			expect(result).toEqual({
+				code: 200,
+				message: '',
+				event: {
+					event_type: 'event_type',
+				},
+			});
+		});
 	});
 });
