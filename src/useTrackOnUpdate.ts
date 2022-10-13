@@ -4,7 +4,6 @@ import { EventOptions, Result } from '@amplitude/analytics-types';
 import isEqual from 'lodash.isequal';
 
 const useComponentDidUpdate = (effect: (...args: unknown[]) => unknown, dependencies: DependencyList) => {
-	dependencies = dependencies || [];
 	const hasMounted = useRef(false);
 
 	const memoized = useCallback(effect, dependencies);
