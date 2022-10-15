@@ -1,3 +1,3 @@
 # use-react-amplitude
 
-(https://codecov.io/github/Valyay/use-react-amplitude/settings)
+[![codecov](https://codecov.io/gh/Valyay/use-react-amplitude/branch/main/graph/badge.svg?token=1ZQ8W9Y87T)](https://codecov.io/gh/Valyay/use-react-amplitude)
