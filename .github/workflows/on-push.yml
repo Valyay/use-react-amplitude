@@ -25,5 +25,9 @@ jobs:
         run: npm run test
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
+        with:
+        files: ./coverage1.xml,./coverage2.xml # optional
+        fail_ci_if_error: true # optional (default = false)
+        verbose: true # optional (default = false)
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
