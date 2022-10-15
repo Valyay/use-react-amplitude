@@ -4,21 +4,14 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'src/**'
   pull_request:
     branches:
       - main
-    paths:
-      - 'src/**'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     name: Test JS frontend
-    defaults:
-      run:
-        working-directory: ./src
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v2
@@ -30,5 +23,3 @@ jobs:
         run: npm run test
       - name: Upload coverage reports to Codecov with GitHub Action
         uses: codecov/codecov-action@v2
-        with:
-          flags: frontend
