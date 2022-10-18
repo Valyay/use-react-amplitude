@@ -17,24 +17,37 @@ const useComponentDidUpdate = (effect: (...args: unknown[]) => unknown, dependen
 	}, [memoized]);
 };
 
+/**
+ * The hook is called after changing any of the values in the array. (deep comparison is used)
+ * Analogue of DidComponentUpdate
+ *
+ * @param {string} eventInput
+ * @param {DependencyList} dependencies
+ * @param {Record<string, any} eventProperties
+ * @param {EventOptions} eventOptions
+ *
+ * @returns `{ event: Event, code: number, message: string }`
+ *
+ */
+
 export const useTrackOnUpdate = (
 	eventInput: string,
-	changingValue: DependencyList,
+	dependencies: DependencyList,
 	eventProperties?: Record<string, any> | undefined,
 	eventOptions?: EventOptions | undefined,
 ) => {
-	const [currentValue, setCurrentValue] = useState<DependencyList>([]);
+	const [currentDependencies, setCurrentValue] = useState<DependencyList>([]);
 	const [result, setResult] = useState<Partial<Result>>({ event: undefined, code: undefined, message: undefined });
 
-	if (!isEqual(currentValue, changingValue)) {
-		setCurrentValue(changingValue);
+	if (!isEqual(currentDependencies, dependencies)) {
+		setCurrentValue(dependencies);
 	}
 
 	useComponentDidUpdate(() => {
 		track(eventInput, eventProperties, eventOptions).promise.then(data => {
 			setResult(data);
 		});
-	}, [currentValue]);
+	}, [currentDependencies]);
 
 	return result;
 };

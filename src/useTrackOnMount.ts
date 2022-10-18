@@ -2,6 +2,17 @@ import { useState, useEffect } from 'react';
 import { track } from '@amplitude/analytics-browser';
 import { EventOptions, Result } from '@amplitude/analytics-types';
 
+/**
+ * Hook is called after the component is mounted
+ *
+ * @param {string} eventInput
+ * @param {Record<string, any} eventProperties
+ * @param {EventOptions} eventOptions
+ *
+ * @returns `{ event: Event, code: number, message: string }`
+ *
+ */
+
 export const useTrackOnMount = (
 	eventInput: string,
 	eventProperties?: Record<string, any> | undefined,
