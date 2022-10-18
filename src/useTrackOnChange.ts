@@ -8,7 +8,7 @@ import isEqual from 'lodash.isequal';
  *
  * @param {string} eventInput
  * @param {DependencyList} dependencies
- * @param {Record<string, any} eventProperties
+ * @param {Record<string, unknown} eventProperties
  * @param {EventOptions} eventOptions
  *
  * @returns `{ event: Event, code: number, message: string }`
@@ -18,7 +18,7 @@ import isEqual from 'lodash.isequal';
 export const useTrackOnChange = (
 	eventInput: string,
 	dependencies: DependencyList,
-	eventProperties?: Record<string, any> | undefined,
+	eventProperties?: Record<string, unknown> | undefined,
 	eventOptions?: EventOptions | undefined,
 ) => {
 	const [currentDependencies, setCurrentDependencies] = useState<DependencyList>([]);
@@ -29,7 +29,7 @@ export const useTrackOnChange = (
 	}
 
 	useEffect(() => {
-		track(eventInput, eventProperties, eventOptions).promise.then(data => {
+		track(eventInput, eventProperties, eventOptions).promise.then((data) => {
 			setResult(data);
 		});
 	}, [currentDependencies]);

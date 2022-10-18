@@ -6,8 +6,10 @@ React hooks for [Amplitude](https://amplitude.com/).
 
 ## Features
 
-- Simple
-- Typescript support
+- **Small.** 5 kB (minified and gzipped).
+  [Size Limit](https://github.com/ai/size-limit) controls the size.
+- **Simple.**
+- **Typescript support.**
 
 ## Install
 
@@ -23,33 +25,30 @@ https://github.com/Valyay/use-react-amplitude/blob/main/CHANGELOG.md
 
 Hook is called after the component is mounted.
 
-| Prop        | Type | Required     |
-|   :----:    |    :----:   |   :---:       |
-| eventInput      |  string | true |
-| eventProperties   | Record<string, any>        | false     |
-| eventOptions   | EventOptions        | false      |
+|      Prop       |          Type           | Required |
+| :-------------: | :---------------------: | :------: |
+|   eventInput    |         string          |   true   |
+| eventProperties | Record<string, unknown> |  false   |
+|  eventOptions   |      EventOptions       |  false   |
 
 ### useTrackOnChange
 
-The hook is called after mounting a component or changing any of the values in the array.  (deep comparison is used)
+The hook is called after mounting a component or changing any of the values in the array. (deep comparison is used)
 
-| Prop        | Type | Required     |
-|   :----:    |    :----:   |   :---:       |
-| eventInput      |  string | true |
-| dependencies      |  DependencyList | true |
-| eventProperties   | Record<string, any>        | false     |
-| eventOptions   | EventOptions        | false      |
-
+|      Prop       |          Type           | Required |
+| :-------------: | :---------------------: | :------: |
+|   eventInput    |         string          |   true   |
+|  dependencies   |     DependencyList      |   true   |
+| eventProperties | Record<string, unknown> |  false   |
+|  eventOptions   |      EventOptions       |  false   |
 
 ### useTrackOnUpdate
 
 The hook is called after changing any of the values in the array. Analogue of DidComponentUpdate. (deep comparison is used)
 
-| Prop        | Type | Required     |
-|   :----:    |    :----:   |   :---:       |
-| eventInput      |  string | true |
-| dependencies      |  DependencyList | true |
-| eventProperties   | Record<string, any>        | false     |
-| eventOptions   | EventOptions        | false      |
-
-
+|      Prop       |          Type           | Required |
+| :-------------: | :---------------------: | :------: |
+|   eventInput    |         string          |   true   |
+|  dependencies   |     DependencyList      |   true   |
+| eventProperties | Record<string, unknown> |  false   |
+|  eventOptions   |      EventOptions       |  false   |

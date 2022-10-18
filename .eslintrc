@@ -1,6 +1,6 @@
 {
 	"parser": "@typescript-eslint/parser",
-	"extends": ["plugin:@typescript-eslint/recommended", "prettier/@typescript-eslint", "plugin:prettier/recommended"],
+	"extends": ["plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
 	"parserOptions": {
 		"ecmaVersion": 2018,
 		"sourceType": "module"
@@ -8,10 +8,7 @@
 	"plugins": ["react-hooks"],
 	"rules": {
 		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "error",
-		"semi": ["error", "always"],
-		"space-before-function-paren": 0,
-		"@typescript-eslint/explicit-function-return-type": 0,
-		"@typescript-eslint/no-explicit-any": 0
+		"react-hooks/exhaustive-deps": 0,
+		"semi": ["error", "always"]
 	}
 }

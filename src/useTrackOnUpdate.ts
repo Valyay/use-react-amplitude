@@ -23,7 +23,7 @@ const useComponentDidUpdate = (effect: (...args: unknown[]) => unknown, dependen
  *
  * @param {string} eventInput
  * @param {DependencyList} dependencies
- * @param {Record<string, any} eventProperties
+ * @param {Record<string, unknown} eventProperties
  * @param {EventOptions} eventOptions
  *
  * @returns `{ event: Event, code: number, message: string }`
@@ -33,7 +33,7 @@ const useComponentDidUpdate = (effect: (...args: unknown[]) => unknown, dependen
 export const useTrackOnUpdate = (
 	eventInput: string,
 	dependencies: DependencyList,
-	eventProperties?: Record<string, any> | undefined,
+	eventProperties?: Record<string, unknown> | undefined,
 	eventOptions?: EventOptions | undefined,
 ) => {
 	const [currentDependencies, setCurrentValue] = useState<DependencyList>([]);
@@ -44,7 +44,7 @@ export const useTrackOnUpdate = (
 	}
 
 	useComponentDidUpdate(() => {
-		track(eventInput, eventProperties, eventOptions).promise.then(data => {
+		track(eventInput, eventProperties, eventOptions).promise.then((data) => {
 			setResult(data);
 		});
 	}, [currentDependencies]);

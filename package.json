@@ -2,17 +2,27 @@
 	"name": "@valyay/use-react-amplitude",
 	"version": "0.0.12",
 	"description": "Useful hooks for working with amplitude",
-	"source": "src/index.ts",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"type": "module",
 	"files": [
 		"dist/**/*"
 	],
+	"source": "src/index.ts",
+	"main": "dist/index.js",
+	"umd:main": "dist/index.umd.js",
+	"module": "dist/index.module.js",
+	"exports": {
+		"types": "./dist/index.d.ts",
+		"require": "./dist/index.js",
+		"default": "./dist/index.modern.mjs"
+	},
+	"types": "dist/index.d.ts",
 	"scripts": {
-		"test": "jest",
+		"lint": "eslint --fix \"src/**.ts\"",
+		"test": "jest && eslint \"src/**.ts\"",
 		"test:dev": "jest --watchAll",
 		"test:coverage": "jest --coverage",
-		"build": "tsc",
+		"build": "microbundle",
+		"size": "npm run build && size-limit",
 		"publish-lib": "npm run build && npm publish",
 		"publish-beta": "npm run build && npm publish --tag beta",
 		"publish-dryrun": "npm run build && npm publish --dry-run"
@@ -40,6 +50,7 @@
 	},
 	"devDependencies": {
 		"@amplitude/analytics-browser": "^1.0",
+		"@size-limit/preset-small-lib": "^8.1.0",
 		"@testing-library/react": "^12.1.4",
 		"@testing-library/react-hooks": "^8.0.1",
 		"@types/jest": "^27.5.2",
@@ -53,10 +64,12 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-config-standard": "^17.0.0",
 		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-standard": "^5.0.0",
 		"jest": "^27.0.0",
-		"prettier": "^1.19.1",
+		"microbundle": "^0.15.1",
+		"prettier": "^2.7.1",
 		"react": "^16.9.0",
 		"react-dom": "^16.9.0",
 		"react-test-renderer": "^16.9.0",
@@ -65,5 +78,38 @@
 	},
 	"dependencies": {
 		"lodash.isequal": "^4.5.0"
-	}
+	},
+	"size-limit": [
+		{
+			"path": "dist/index.js",
+			"limit": "5 KB"
+		},
+		{
+			"path": "dist/index.modern.js",
+			"limit": "5 KB"
+		},
+		{
+			"path": "dist/index.module.js",
+			"limit": "5 KB"
+		},
+		{
+			"path": "dist/index.umd.js",
+			"limit": "5 KB"
+		},
+		{
+			"path": "dist/index.modern.js",
+			"import": "{ useTrackOnMount }",
+			"limit": "5 KB"
+		},
+		{
+			"path": "dist/index.modern.js",
+			"import": "{ useTrackOnChange }",
+			"limit": "5 KB"
+		},
+		{
+			"path": "dist/index.modern.js",
+			"import": "{ useTrackOnUpdate }",
+			"limit": "5 KB"
+		}
+	]
 }

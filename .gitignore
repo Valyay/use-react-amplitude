@@ -6,3 +6,4 @@ npm-debug.js
 /dist
 .prettierrc
 /coverage
+.eslintignore
