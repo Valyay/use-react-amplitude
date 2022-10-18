@@ -21,7 +21,7 @@ https://github.com/Valyay/use-react-amplitude/blob/main/CHANGELOG.md
 
 ### useTrackOnMount
 
-Hook is called after the component is mounted
+Hook is called after the component is mounted.
 
 | Prop        | Type | Required     |
 |   :----:    |    :----:   |   :---:       |
@@ -36,19 +36,19 @@ The hook is called after mounting a component or changing any of the values in t
 | Prop        | Type | Required     |
 |   :----:    |    :----:   |   :---:       |
 | eventInput      |  string | true |
-| changingValue      |  DependencyList | true |
+| dependencies      |  DependencyList | true |
 | eventProperties   | Record<string, any>        | false     |
 | eventOptions   | EventOptions        | false      |
 
 
 ### useTrackOnUpdate
 
-The hook is called after changing any of the values in the array. (deep comparison is used)
+The hook is called after changing any of the values in the array. Analogue of DidComponentUpdate. (deep comparison is used)
 
 | Prop        | Type | Required     |
 |   :----:    |    :----:   |   :---:       |
 | eventInput      |  string | true |
-| changingValue      |  DependencyList | true |
+| dependencies      |  DependencyList | true |
 | eventProperties   | Record<string, any>        | false     |
 | eventOptions   | EventOptions        | false      |
 
