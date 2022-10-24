@@ -11,5 +11,5 @@ interface IAmplitudeProvider {
 
 export const AmplitudeProvider = (props: IAmplitudeProvider) => {
 	init(props.apiKey, props.userId, props.options);
-	<>{props.children}</>;
+	return <>{props.children}</>;
 };
