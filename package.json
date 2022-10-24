@@ -47,7 +47,6 @@
 	},
 	"homepage": "https://github.com/Valyay/use-react-amplitude#readme",
 	"peerDependencies": {
-		"@amplitude/analytics-browser": "^1.0",
 		"react": ">=16.9.0"
 	},
 	"devDependencies": {
