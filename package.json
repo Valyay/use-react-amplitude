@@ -32,8 +32,10 @@
 		"url": "git+https://github.com/Valyay/use-react-amplitude.git"
 	},
 	"keywords": [
+		"analytics",
 		"react",
-		"amplitude"
+		"amplitude",
+		"hooks"
 	],
 	"author": "Evgeniy Valyaev",
 	"license": "MIT",
