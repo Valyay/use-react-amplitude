@@ -13,7 +13,7 @@ React hooks for [Amplitude](https://amplitude.com/).
 
 ## Install
 
-    npm install @use-react-amplitude
+    npm install @valyay/use-react-amplitude
 
 ## Changelog
 
