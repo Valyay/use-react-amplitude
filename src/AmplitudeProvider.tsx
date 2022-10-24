@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import { init } from '@amplitude/analytics-browser';
-import { BrowserOptions, AdditionalBrowserOptions } from '@amplitude/analytics-types';
+import { BrowserOptions } from '@amplitude/analytics-types';
 
 interface IAmplitudeProvider {
 	apiKey: string;
 	userId?: string;
-	options?: BrowserOptions & AdditionalBrowserOptions;
+	options?: BrowserOptions;
 	children: React.ReactNode;
 }
 

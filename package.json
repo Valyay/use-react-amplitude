@@ -50,7 +50,6 @@
 		"react": ">=16.9.0"
 	},
 	"devDependencies": {
-		"@amplitude/analytics-browser": "^1.0",
 		"@size-limit/preset-small-lib": "^8.1.0",
 		"@testing-library/react": "^12.1.4",
 		"@testing-library/react-hooks": "^8.0.1",
@@ -78,39 +77,40 @@
 		"typescript": "^4.0"
 	},
 	"dependencies": {
+		"@amplitude/analytics-browser": "^1.5.5",
 		"lodash.isequal": "^4.5.0"
 	},
 	"size-limit": [
 		{
 			"path": "dist/index.modern.mjs",
-			"limit": "24 KB"
+			"limit": "28 KB"
 		},
 		{
 			"path": "dist/index.modern.mjs",
-			"limit": "24 KB"
+			"limit": "28 KB"
 		},
 		{
 			"path": "dist/index.module.js",
-			"limit": "24 KB"
+			"limit": "28 KB"
 		},
 		{
 			"path": "dist/index.umd.js",
-			"limit": "24 KB"
+			"limit": "35 KB"
 		},
 		{
 			"path": "dist/index.modern.mjs",
 			"import": "{ useTrackOnMount }",
-			"limit": "24 KB"
+			"limit": "28 KB"
 		},
 		{
 			"path": "dist/index.modern.mjs",
 			"import": "{ useTrackOnChange }",
-			"limit": "24 KB"
+			"limit": "28 KB"
 		},
 		{
 			"path": "dist/index.modern.mjs",
 			"import": "{ useTrackOnUpdate }",
-			"limit": "24 KB"
+			"limit": "28 KB"
 		}
 	]
 }
