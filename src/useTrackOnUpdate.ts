@@ -4,7 +4,7 @@ import { EventOptions, Result } from '@amplitude/analytics-types';
 import isEqual from 'lodash.isequal';
 
 const useComponentDidUpdate = (effect: (...args: unknown[]) => unknown, dependencies: DependencyList) => {
-	const hasMounted = useRef(false);
+	const hasMounted = useRef<boolean>(false);
 
 	const memoized = useCallback(effect, dependencies);
 
@@ -23,7 +23,7 @@ const useComponentDidUpdate = (effect: (...args: unknown[]) => unknown, dependen
  *
  * @param {string} eventInput
  * @param {DependencyList} dependencies
- * @param {Record<string, unknown} eventProperties
+ * @param {Record<string, unknown>} eventProperties
  * @param {EventOptions} eventOptions
  *
  * @returns `{ event: Event, code: number, message: string }`

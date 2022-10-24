@@ -8,7 +8,7 @@ import isEqual from 'lodash.isequal';
  *
  * @param {string} eventInput
  * @param {DependencyList} dependencies
- * @param {Record<string, unknown} eventProperties
+ * @param {Record<string, unknown>} eventProperties
  * @param {EventOptions} eventOptions
  *
  * @returns `{ event: Event, code: number, message: string }`
