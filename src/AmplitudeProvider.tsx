@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { init } from '@amplitude/analytics-browser';
 import { BrowserOptions, AdditionalBrowserOptions } from '@amplitude/analytics-types';
 
@@ -11,5 +11,5 @@ interface IAmplitudeProvider {
 
 export const AmplitudeProvider = (props: IAmplitudeProvider) => {
 	init(props.apiKey, props.userId, props.options);
-	return <>{props.children}</>;
+	return <Fragment>{props.children}</Fragment>;
 };

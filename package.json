@@ -21,7 +21,7 @@
 		"test": "jest && eslint \"src/**.ts\"",
 		"test:dev": "jest --watchAll",
 		"test:coverage": "jest --coverage",
-		"build": "microbundle",
+		"build": "rm -rf ./dist/*; microbundle build --entry src/index.ts --name use-react-amplitude --jsx React.createElement --tsconfig tsconfig.json",
 		"size": "npm run build && size-limit",
 		"publish-lib": "npm run build && npm publish",
 		"publish-beta": "npm run build && npm publish --tag beta",
@@ -82,35 +82,35 @@
 	},
 	"size-limit": [
 		{
-			"path": "dist/index.js",
-			"limit": "5 KB"
+			"path": "dist/index.modern.mjs",
+			"limit": "24 KB"
 		},
 		{
-			"path": "dist/index.modern.js",
-			"limit": "5 KB"
+			"path": "dist/index.modern.mjs",
+			"limit": "24 KB"
 		},
 		{
 			"path": "dist/index.module.js",
-			"limit": "5 KB"
+			"limit": "24 KB"
 		},
 		{
 			"path": "dist/index.umd.js",
-			"limit": "5 KB"
+			"limit": "24 KB"
 		},
 		{
-			"path": "dist/index.modern.js",
+			"path": "dist/index.modern.mjs",
 			"import": "{ useTrackOnMount }",
-			"limit": "5 KB"
+			"limit": "24 KB"
 		},
 		{
-			"path": "dist/index.modern.js",
+			"path": "dist/index.modern.mjs",
 			"import": "{ useTrackOnChange }",
-			"limit": "5 KB"
+			"limit": "24 KB"
 		},
 		{
-			"path": "dist/index.modern.js",
+			"path": "dist/index.modern.mjs",
 			"import": "{ useTrackOnUpdate }",
-			"limit": "5 KB"
+			"limit": "24 KB"
 		}
 	]
 }
