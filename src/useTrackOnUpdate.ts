@@ -19,7 +19,7 @@ const useComponentDidUpdate = (effect: (...args: unknown[]) => unknown, dependen
 
 /**
  * The hook is called after changing any of the values in the array. (deep comparison is used)
- * Analogue of DidComponentUpdate
+ * Analogue of componentDidUpdate
  *
  * @param {string} eventInput
  * @param {DependencyList} dependencies
