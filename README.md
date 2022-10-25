@@ -6,7 +6,7 @@ React hooks for [Amplitude](https://amplitude.com/).
 
 ## Features
 
-- **Small.** 380 bytes (minified and gzipped).
+- **Small.** 363 bytes (minified and gzipped).
   [Size Limit](https://github.com/ai/size-limit) controls the size.
 - **Simple.**
 - **Typescript support.**
@@ -20,6 +20,16 @@ React hooks for [Amplitude](https://amplitude.com/).
 https://github.com/Valyay/use-react-amplitude/blob/main/CHANGELOG.md
 
 ## API
+
+### initAmplitude
+
+Wrapper for initialization Amplitude. Full analogue of [init](https://www.docs.developers.amplitude.com/data/sdks/typescript-browser/?h=typ#initialize-the-sdk)
+
+|  Prop   |                                                     Type                                                      | Required |
+| :-----: | :-----------------------------------------------------------------------------------------------------------: | :------: |
+| apiKey  |                                                    string                                                     |   true   |
+| userId  |                                                    string                                                     |  false   |
+| options | [BrowserOptions](https://www.docs.developers.amplitude.com/data/sdks/typescript-browser/?h=typ#configuration) |  false   |
 
 ### useTrackOnMount
 
