@@ -14,7 +14,7 @@ React hooks for [Amplitude](https://amplitude.com/).
 
 ## Install
 
-    npm install @valyay/use-react-amplitude
+    npm install use-react-amplitude
 
 ## Changelog
 
@@ -71,7 +71,7 @@ First, you must initialize the SDK. Find your Amplitude project's API Key in you
 
       return <div>Title</div>;
 
-};
+    };
 
 ## Track event when component mounts or dependencies change
 
@@ -90,7 +90,7 @@ First, you must initialize the SDK. Find your Amplitude project's API Key in you
       </div>
       );
 
-};
+    };
 
 ## Track event when only dependencies change
 
@@ -109,13 +109,13 @@ First, you must initialize the SDK. Find your Amplitude project's API Key in you
       </div>
       );
 
-};
+    };
 
 ## API
 
 ### initAmplitude
 
-Wrapper for initialization Amplitude. Full analogue of [init](https://www.docs.developers.amplitude.com/data/sdks/typescript-browser/?h=typ#initialize-the-sdk)
+Wrapper for initialization Amplitude. Full analogue of [init](https://www.docs.developers.amplitude.com/data/sdks/typescript-browser/?h=typ#initialize-the-sdk).
 
 |  Prop   |                                                     Type                                                      | Required |
 | :-----: | :-----------------------------------------------------------------------------------------------------------: | :------: |
