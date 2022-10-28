@@ -1,6 +1,6 @@
 {
 	"name": "use-react-amplitude",
-	"version": "0.0.14",
+	"version": "0.0.15",
 	"description": "Useful hooks for working with amplitude",
 	"type": "module",
 	"files": [
