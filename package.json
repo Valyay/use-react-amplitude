@@ -1,5 +1,5 @@
 {
-	"name": "@valyay/use-react-amplitude",
+	"name": "use-react-amplitude",
 	"version": "0.0.14",
 	"description": "Useful hooks for working with amplitude",
 	"type": "module",
@@ -41,9 +41,6 @@
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/Valyay/use-react-amplitude/issues"
-	},
-	"publishConfig": {
-		"@valyay:registry": "https://npm.pkg.github.com"
 	},
 	"homepage": "https://github.com/Valyay/use-react-amplitude#readme",
 	"peerDependencies": {
