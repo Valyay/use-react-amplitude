@@ -1,12 +1,12 @@
 # use-react-amplitude
 
-[![codecov](https://codecov.io/gh/Valyay/use-react-amplitude/branch/main/graph/badge.svg?token=1ZQ8W9Y87T)](https://codecov.io/gh/Valyay/use-react-amplitude)
+[![codecov](https://codecov.io/gh/Valyay/use-react-amplitude/branch/main/graph/badge.svg?token=1ZQ8W9Y87T)](https://codecov.io/gh/Valyay/use-react-amplitude) ![npm](https://img.shields.io/npm/v/use-react-amplitude)
 
 React hooks for [Amplitude](https://amplitude.com/).
 
 ## Features
 
-- **Small.** 363 bytes (minified and gzipped).
+- **Small.** 23.4 kB (minified and gzipped).
   [Size Limit](https://github.com/ai/size-limit) controls the size.
 - **Simple.**
 - **Modern.** Based on the latest [Typescript SDK for Web](https://www.docs.developers.amplitude.com/data/sdks/typescript-browser/), but does not required installation. Сan be used with the Typescript SDK.
@@ -82,7 +82,15 @@ First, you must initialize the SDK. Find your Amplitude project's API Key in you
 
       const [count, setCount] = useState<number>(0);
 
+      // Initialize with event input only
       useTrackOnChange("count increase", [count]);
+      
+      // Hook return code, event and message of event
+      const {code, event, message} = useTrackOnChange("count increase", [count]);
+
+      // console.log(event); // {...}
+      // console.log(code); // 200
+      // console.log(message); // "Event tracked successfully"
 
       return (
         <div>
@@ -100,9 +108,16 @@ First, you must initialize the SDK. Find your Amplitude project's API Key in you
     export const Component = () => {
 
       const [count, setCount] = useState<number>(0);
-
+      
+      // Initialize with event input only
       useTrackOnUpdate("count increase", [count]);
-
+      
+      // Hook return code, event and message of event
+      const {code, event, message} = useTrackOnChange("count increase", [count]);
+      // console.log(event); // {...}
+      // console.log(code); // 200
+      // console.log(message); // "Event tracked successfully"
+      
       return (
         <div>
             <button onClick={()=>{setCount(count+1);}}>click</button>
