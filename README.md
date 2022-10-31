@@ -6,7 +6,7 @@ React hooks for [Amplitude](https://amplitude.com/).
 
 ## Features
 
-- **Small.** 23.4 kB (minified and gzipped).
+- **Small.** 27.2 kB (minified and gzipped).
   [Size Limit](https://github.com/ai/size-limit) controls the size.
 - **Simple.**
 - **Modern.** Based on the latest [Typescript SDK for Web](https://www.docs.developers.amplitude.com/data/sdks/typescript-browser/), but does not required installation. Сan be used with the Typescript SDK.
