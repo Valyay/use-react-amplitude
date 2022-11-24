@@ -35,7 +35,15 @@
 		"analytics",
 		"react",
 		"amplitude",
-		"hooks"
+		"hook",
+		"hooks",
+		"metrics",
+		"tracking",
+		"track",
+		"ts",
+		"typescript",
+		"event",
+		"events"
 	],
 	"author": "Evgeniy Valyaev",
 	"license": "MIT",
